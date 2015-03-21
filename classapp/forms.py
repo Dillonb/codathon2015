@@ -17,3 +17,6 @@ class AddCourseForm(forms.Form):
 
 class NewPostForm(forms.Form):
     content = forms.CharField(widget=forms.Textarea)
+
+class NewReplyForm(forms.Form):
+    content = forms.CharField(widget=forms.Textarea)

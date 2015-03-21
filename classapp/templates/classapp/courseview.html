@@ -12,11 +12,28 @@
     <input type="submit" value="Post">
 </form>
 
-{% for post in posts %}
+<ul class="posts">
+    {% for post in posts %}
+        <li class="post">
+            <p>{{ post.user.full_name }} Made a post</p>
+            <p>{{ post.content }}</p>
+            <ul class="comments">
+                {% for comment in post.comment_set.all %}
+                    <li class="comment">
+                        <p>{{ comment.user.full_name }}</p>
+                        <p>{{ comment.content }}</p>
+                    </li>
+                {% endfor %}
+            </ul>
+            <h2>REPLY</h2>
+            <form action="/postreply/{{ post.id }}" method="post">
+                {% csrf_token %}
+                {{ new_reply_form }}
+                <input type="submit" value="Post reply">
+            </form>
+        </li>
 
-    <p>{{ post.user.full_name }} Made a post</p>
-    <p>{{ post.content }}</p>
-
-{% endfor %}
+    {% endfor %}
+</ul>
 
 {% endblock %}
