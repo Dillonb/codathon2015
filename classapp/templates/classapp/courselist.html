@@ -11,12 +11,12 @@
 <div class='sidebar'>
 
     {% if user.is_authenticated %}
-    <div class='sidebar_icon_bar'>
+    <div class='sidebar_info'>
     	<img src='{% static "images/avatar_logo_default.png" %}' class='avatar_logo_default'>
-        <p>Hello, {{ user.full_name }}<a href="/accounts/logout">Logout</a></p>
+        <p class='welcome_text'>Hello, {{ user.full_name }}</p><a href="/accounts/logout">Logout</a>
     </div>
     {% endif %}
-<p class='welcome_text'>You're logged in, grats....you should add courses</p>
+<p>You're logged in, grats....you should add courses</p>
 
     {% for course in courses %}
 
