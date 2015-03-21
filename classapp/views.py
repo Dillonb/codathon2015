@@ -17,6 +17,15 @@ def logout_view(request):
 
 @login_required
 def course_list_view(request):
+    if request.user.ldap_user:
+        print (request.user.ldap_user.attrs)
+        for affiliation in request.user.ldap_user.attrs[u'edupersonaffiliation']:
+            # If they're faculty, log them out and send them to the noprofessors page.
+            if affiliation == u'Faculty':
+                logout(request)
+                return redirect("/noprofessors")
+    print("You're allowed to access the site.")
+
     courses = request.user.course_set.all()
     return render(request,"classapp/courselist.html",{"courses": courses})
 
@@ -127,5 +136,8 @@ def info_edit_view(request):
         return redirect("/courses/list")
     else:
         return render(request,"classapp/info_form.html", {"form": form, "person":request.user})
+
+def no_professors_view(request):
+    return render(request, "classapp/noprofessors.html")
 # def profile_card_view(request):
 # 	return render(request, "classapp/")

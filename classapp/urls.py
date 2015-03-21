@@ -10,5 +10,6 @@ urlpatterns = patterns('',
     url(r'^courses/view/(?P<courseid>\d+)$', 'classapp.views.course_view_view'),
     url(r'^postreply/(?P<postid>\d+)$', 'classapp.views.post_reply_view'),
     url(r'^courses/classmates/(?P<courseid>\d+)$', 'classapp.views.classmate_view'),
+    url(r'^noprofessors/$', 'classapp.views.no_professors_view'),
     url(r'^$', 'classapp.views.home_view')
 )
