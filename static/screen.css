@@ -97,4 +97,15 @@ body {
     padding: 2em;
     background-color: white;}
 
+.helpcontent {
+  padding: 0 2em;
+  text-align: justify;
+}
+
+.helpbutton {
+  background: #ffffff;
+  padding: 5px 5px 5px 5px;
+  border: 1px solid #ffffff;
+  
+}
 /*# sourceMappingURL=screen.css.map */
