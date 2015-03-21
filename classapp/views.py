@@ -123,7 +123,7 @@ def post_reply_view(request, postid):
     else:
         print(request.POST)
         print(form.errors)
-        return HttpResponse("Everything fucked up")
+        return redirect(post.course.get_absolute_url())
 
 
 @login_required
