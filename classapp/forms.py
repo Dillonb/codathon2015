@@ -49,6 +49,9 @@ class AddCourseForm(forms.Form):
         if subject_good:
             cleaned_data[u'subject'] = cleaned_data[u'subject'].upper()
 
+        if section_good:
+            cleaned_data[u'section'] = cleaned_data[u'section'].upper()
+
         if not (crn_good or (subject_good and section_good)):
             raise forms.ValidationError("Fill in either the CRN or the Subject/Section fields!")
 

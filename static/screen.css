@@ -104,7 +104,8 @@ body {
   padding: 0;
   background: #426139;
   height: 100vh;
-  color: #ddd; }
+  color: #ddd;
+  position: static; }
   .sidebar a {
     color: #163673; }
 

@@ -153,7 +153,7 @@ def no_professors_view(request):
 
 @login_required
 def course_leave_view(request, courseid):
-    course = Course.objects.get(id=courseid)
+    course = get_object_or_404(Course, id=courseid)
     course.users.remove(request.user)
     return redirect("/courses/list")
 
