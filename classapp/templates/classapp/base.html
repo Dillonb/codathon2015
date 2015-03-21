@@ -10,5 +10,20 @@
 
     {% block body %}
     {% endblock %}
+    
+    {% if user.is_authenticated %}
+	<div class='sidebar'>
+	
+	    {% if user.is_authenticated %}
+	    <div class='sidebar_info'>
+	    	<img src='{% static "images/avatar_logo_default.png" %}' class='avatar_logo_default'>
+	        <p class='welcome_text'>Hello, {{ user.full_name }}</p><a href="/accounts/logout" class='logout'>Logout</a>
+			<p><a href="/accounts/edit">Edit Personal Info</a></p>
+	    </div>
+	    {% endif %}
+		<p>You're logged in, grats....you should add courses</p>
+		<p><a href="/courses/add">Add a course</a></p>
+	</div>
+	{% endif %}
 </body>
 </html>
