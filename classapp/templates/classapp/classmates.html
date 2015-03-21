@@ -9,12 +9,13 @@
         	<ul class="contact_info_list">
         		
         		<li>
-        			UVM Email: {{person.first_name }}.{{person.last_name }}@uvm.edu
+        			UVM Email: {{ person.uvm_email }}
+                    <a href="mailto:{{ person.uvm_email }}?Subject=Message from a classmate via CatLynx"><br>Send Email</a>
         		</li>
 
         		{% if person.facebook_url %}
         			<li>
-        				Facebook: {{ person.facebook_url }}
+        				<a href="{{ facebook_url }}">{{ first_name }}'s Facebook</a>
         			</li>
         		{% endif %}
 
