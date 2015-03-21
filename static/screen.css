@@ -82,11 +82,16 @@ body {
 
 .main_content {
   width: 75%;
+  
   float: left;
   min-height: 100vh;}
 .main_content article{
-    width: 80%;
-    margin:auto;
+    position: absolute;
+    width: 50%;
+    
+    top: 30%;
+    left: 10%;
+    padding: 2em;
     background-color: white;}
 
 /*# sourceMappingURL=screen.css.map */
