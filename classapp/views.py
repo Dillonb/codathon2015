@@ -55,11 +55,11 @@ def course_add_view(request):
 
 @login_required
 def info_edit_view(request):
-    form = ContactForm(request)
+    form = ContactForm(data=request.POST)
 
     if form.is_valid():
         pass
     else:
-        return render(request,"classapp/edit_info.html")
+        return render(request,"classapp/info_form.html", {"form": form})
 # def profile_card_view(request):
 # 	return render(request, "classapp/")
