@@ -1,6 +1,9 @@
 {% extends "classapp/base.html" %}
 
 {% block body %}
+
+<a href="/courses/classmates/{{ course.id }}" >See classmates.</a>
+
 <article>
 <p>{{ course.term }} {{ course.subject }}{{ course.number }}, Section {{ course.section }}</p>
 
