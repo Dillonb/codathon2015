@@ -3,7 +3,7 @@
 {% block body %}
 
 <article>
-    <h2>Editing the contact info of {{ person.first_name }} {{ person.last_name }}.</h2>
+    <h2>Editing the contact info of {{ person.first_name }} {{ person.last_name }}.</h2><br>
     <form action="/accounts/edit/" method="POST">
 
     {% if form.non_field_errors %}
