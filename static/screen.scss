@@ -2,6 +2,11 @@
 @import "home.scss";
 @import "courselist.scss";
 
+body {
+	background: url('/static/images/home_logo_background.png');
+	background-size: cover;
+}
+
 .sidebar {
 	float: right;
 	width: 25%;
@@ -25,8 +30,6 @@
 }
 
 .main_content {
-	background: url('/static/images/home_logo_background.png');
-	background-size: cover;
 	width: 75%;
 	float: left;
 	min-height: 100vh;

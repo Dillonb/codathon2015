@@ -7,15 +7,21 @@
 	<div class='courselist_classes'>
 	
 	    {% for course in courses %}
-	    <a href="{{ course.get_absolute_url }}">
 		<div class='course_object'>
+	    <a href="{{ course.get_absolute_url }}">
 	    	<p>
 	    		{{ course.subject }}
 	    		
 	    		{{ course.number }}
 	    	</p>
-		</div>
 		</a>
+	    	<p>
+	    		{{ course.name }}
+	    	</p>
+	    	<p>
+	    		{{ course.instructor }}
+	    	</p>
+		</div>
 	    {% endfor %}
 	</div>
 </div>
