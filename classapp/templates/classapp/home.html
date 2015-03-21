@@ -10,10 +10,12 @@
 {% if form.errors %}
 Form errors
 {% endif %}
+{% load staticfiles %}
 
 
 <div class="login">
 	<div class='home_logo'>
+		<img src='{% static "images/logo.png" %}' class='home_logo_image'>
 	</div>
     <form action="/accounts/login/" method="post" class='login_form'>
         {% csrf_token %}
