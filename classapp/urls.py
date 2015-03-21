@@ -8,5 +8,6 @@ urlpatterns = patterns('',
     url(r'^courses/list/$', 'classapp.views.course_list_view'),
     url(r'^courses/add/$', 'classapp.views.course_add_view'),
     url(r'^courses/view/(?P<courseid>\d+)$', 'classapp.views.course_view_view'),
+    url(r'^courses/classmates/(?P<courseid>\d+)$', 'classapp.views.classmate_view'),
     url(r'^$', 'django.contrib.auth.views.login', {'template_name': 'classapp/home.html'}),
 )
