@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>{% block title %}{% endblock %}</title>
     {% load staticfiles %}
-    {% static "screen.css" %}
+    <link href='{% static "screen.css" %}' rel='stylesheet' type="text/css">
 </head>
 <body>
     {% block body %}
