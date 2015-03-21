@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth import logout
 from django.contrib.auth.decorators import login_required
 from classapp.models import *
@@ -59,7 +59,7 @@ def course_add_view(request):
 @login_required
 def course_view_view(request,courseid):
     post_form = NewPostForm(data=request.POST)
-    course = Course.objects.get(id=courseid)
+    course = get_object_or_404(Course, id=courseid)
     if post_form.is_valid():
         post = Post(
                     user = request.user,
@@ -75,7 +75,7 @@ def course_view_view(request,courseid):
 
 @login_required
 def classmate_view(request,courseid):
-    course = Course.objects.get(id=courseid)
+    course = get_object_or_404(Course, id=courseid)
     users =  UVMUser.objects.filter(course=course)
     return render(request, "classapp/classmates.html",{"course": course, "users": users})
 
