@@ -4,13 +4,8 @@
 
 .sidebar {
 	float: right;
-	width: calc(25% - 4em);
-	padding: 5em 2em 5em 2em;
+	width: 25%;
+	padding: 0;
 	background: #426139;
-	height: calc(100vh - 10em);
-	
-	.title_image {
-		height: 7.5em;
-		margin-top: -5em;
-	}
+	height: calc(100vh);
 }

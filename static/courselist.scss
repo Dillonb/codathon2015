@@ -8,5 +8,15 @@
 }
 
 .sidebar_icon_bar {
-	height: 5em;
+	height: 33vh;
+	text-align: center;
+	background: rgba(195,195,195,0.8);
+	
+	img {
+		height: 9em;
+	}
+	
+	.welcome_text {
+		font-size: 2em;
+	}
 }

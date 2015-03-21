@@ -1,3 +1,8 @@
+.login .sidebar {
+  text-align: center; }
+.login .title_image {
+  height: 7.5em; }
+
 .home_logo {
   background: url("/static/images/home_logo_background.png");
   float: left;
@@ -14,7 +19,8 @@
   color: #fff;
   font-size: 1.5em;
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  padding: 0 2em; }
   .login_form label {
     margin: 1em 0 .1em; }
   .login_form input {
