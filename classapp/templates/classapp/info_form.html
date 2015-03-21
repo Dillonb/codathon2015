@@ -14,7 +14,7 @@
     
     <span class = "formItem formMisc submitButton"><input type="submit" class="btn btn-default" value="Save"></span>
     {% csrf_token %}
-    <h3>We already have your UVM email {{ currentUser.uvm_email }}</h3>
+    <h3>We already have your UVM email: {{ person.uvm_email }}</h3>
         
     <h3>Link Social Media</h3>
     <span class = "form_item" id = "facebook_url">
