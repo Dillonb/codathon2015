@@ -14,7 +14,7 @@
 
     {% for course in courses %}
 
-        <p>{{ course.term }} {{ course.subject }}{{ course.number }}</p>
+    <p><a href="{{ course.get_absolute_url }}">{{ course.term }} {{ course.subject }}{{ course.number }}</a></p>
 
     {% endfor %}
 

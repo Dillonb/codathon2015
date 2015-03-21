@@ -1,0 +1,22 @@
+{% extends "classapp/base.html" %}
+
+{% block body %}
+
+<p>{{ course.term }} {{ course.subject }}{{ course.number }}, Section {{ course.section }}</p>
+
+<p>Make a post</p>
+
+<form action="{{ course.get_absolute_url }}" method="post">
+    {% csrf_token %}
+    {{ new_post_form }}
+    <input type="submit" value="Post">
+</form>
+
+{% for post in posts %}
+
+    <p>{{ post.user.full_name }} Made a post</p>
+    <p>{{ post.content }}</p>
+
+{% endfor %}
+
+{% endblock %}
