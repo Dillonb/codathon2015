@@ -17,15 +17,17 @@
 			</a>
 			<div class='course_info'>
 		    	<p>
-		    		{{ course.name }}
+                    <b><i>{{ course.name }}</i></b>
 		    	</p>
 		    	<p>
 		    		{{ course.instructor }}
 		    	</p>
+                <br>
 		    	<p>
 		    		{{ course.description }}
 		    	</p>
 			</div>
+                <br>
             <a href="/courses/leave/{{ course.id }}">Leave Course</a>
 		</div>
 	    {% endfor %}
