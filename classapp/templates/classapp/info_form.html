@@ -1,6 +1,8 @@
 {% extends "classapp/base.html" %}
 {% block title %}Personal Contact{% endblock %}
 {% block body %}
+<p><a href="/accounts/profile">Home</a></p>
+<p><a href="/courses/add">Add a course</a></p>
 {% if edit %}
 <h2>Editing the contact info of {{ UVMUser.first_name }} {{ UVMUser.last_name }}.</h2>
 <form action="/editcontact/{{ UVMUser }}" method="POST">
