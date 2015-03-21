@@ -40,7 +40,7 @@ def course_add_view(request):
         data = data[u'sections']
         instructor_str = "None"
         if len(data[u'instructors']) == 0:
-            return render(request,"classapp/addcourse.html", {"form": form})
+            pass
         if len(data[u'instructors']) == 1:
             instructor_str = data[u'instructors'][0][u'first'] + " " + data[u'instructors'][0][u'last']
         else:
