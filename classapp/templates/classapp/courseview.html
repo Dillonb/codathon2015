@@ -1,7 +1,7 @@
 {% extends "classapp/base.html" %}
 
 {% block body %}
-
+<article>
 <p>{{ course.term }} {{ course.subject }}{{ course.number }}, Section {{ course.section }}</p>
 
 <p>Make a post</p>
@@ -35,5 +35,5 @@
 
     {% endfor %}
 </ul>
-
+</article>
 {% endblock %}
