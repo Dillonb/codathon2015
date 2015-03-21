@@ -1,0 +1,44 @@
+{% extends "classapp/base.html" %}
+
+{% block body %}
+
+    {% for person in users %}
+
+        <div class="contact_card">
+        	<h5>{{ person.first_name }} {{ person.last_name }}</h5>
+        	<ul class="contact_info_list">
+        		
+        		<li>
+        			UVM Email: {{person.first_name }}.{{person.last_name }}@uvm.edu
+        		</li>
+
+        		{% if person.facebook_url %}
+        			<li>
+        				Facebook: {{ person.facebook_url }}
+        			</li>
+        		{% endif %}
+
+        		{% if person.additional_email_1 %}
+        			<li>
+        				Other Email: {{ person.additional_email_1 }}
+        			</li>
+        		{% endif %}
+
+        		{% if person.additional_email_2 %}
+        			<li>
+        				Alternate Email: {{ person.additional_email_2 }}
+        			</li>
+        		{% endif %}
+
+        		{% if person.phone_number %}
+        			<li>
+        				Phone: {{ person.phone_number }}
+        			</li>
+        		{% endif %}
+        	
+        	</ul>
+        </div>
+
+    {% endfor %}
+
+{% endblock %}
