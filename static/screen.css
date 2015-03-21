@@ -22,8 +22,8 @@
   height: calc(100vh - 2em);
   color: #fff;
   font-size: 1.5em;
-  padding: 1em 1em 1em 2em; }
-  .login_form input[type='text'] {
-    height: 2em; }
+  padding: 1em 1em 1em 2em;
+  display: flex;
+  flex-direction: column; }
 
 /*# sourceMappingURL=screen.css.map */
