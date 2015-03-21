@@ -115,7 +115,6 @@ def info_edit_view(request):
     if form.is_valid():
         pass
     else:
-        return render(request,"classapp/info_form.html", {"form": form})
-
+        return render(request,"classapp/info_form.html", {"form": form, "person":request.user})
 # def profile_card_view(request):
 # 	return render(request, "classapp/")

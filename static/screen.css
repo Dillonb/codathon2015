@@ -83,6 +83,10 @@ body {
 .main_content {
   width: 75%;
   float: left;
-  min-height: 100vh; }
+  min-height: 100vh;}
+.main_content article{
+    width: 80%;
+    margin:auto;
+    background-color: white;}
 
 /*# sourceMappingURL=screen.css.map */
