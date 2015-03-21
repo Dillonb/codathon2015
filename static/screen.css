@@ -63,6 +63,17 @@
     .courselist_classes .course_object .course_info {
       margin: .5em 0 0 0; }
 
+.classmates {
+  display: flex;
+  justify-content: center; }
+  .classmates .contact_card {
+    border: 1px solid #e1e1e1;
+    background: #d8d8d8;
+    height: 10em;
+    width: 20em; }
+    .classmates .contact_card ul {
+      list-style: none; }
+
 body {
   background: url("/static/images/home_logo_background.png");
   background-size: cover; }

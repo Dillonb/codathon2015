@@ -1,0 +1,12 @@
+.classmates {
+  display: flex;
+  justify-content: center; }
+  .classmates .contact_card {
+    border: 1px solid #e1e1e1;
+    background: #d8d8d8;
+    height: 10em;
+    width: 20em; }
+    .classmates .contact_card ul {
+      list-style: none; }
+
+/*# sourceMappingURL=classmates.css.map */
