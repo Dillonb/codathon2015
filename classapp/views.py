@@ -17,7 +17,7 @@ def logout_view(request):
 
 @login_required
 def course_list_view(request):
-    if request.user.ldap_user:
+    if hasattr(request.user,ldap_user):
         print (request.user.ldap_user.attrs)
         for affiliation in request.user.ldap_user.attrs[u'edupersonaffiliation']:
             # If they're faculty, log them out and send them to the noprofessors page.
