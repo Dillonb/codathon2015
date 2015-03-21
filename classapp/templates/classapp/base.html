@@ -9,9 +9,9 @@
 <body>
 
     {% if user.is_authenticated %}
-        <a href="/accounts/login">Login</a>
-    {% else %}
         <a href="/accounts/logout">Logout</a>
+    {% else %}
+        <a href="/accounts/login">Login</a>
     {% endif %}
 
     {% block body %}
