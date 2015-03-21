@@ -41,6 +41,7 @@ class Course(models.Model):
     crn = models.IntegerField()
     section = models.CharField(max_length=2)
     instructor = models.TextField()
+    name = models.CharField(max_length=150,null=True)
 
     users = models.ManyToManyField("UVMUser")
 

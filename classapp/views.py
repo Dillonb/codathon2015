@@ -47,6 +47,7 @@ def course_add_view(request):
                 number = data[u'number'],
                 instructor = instructor_str,
                 section = data[u'section'],
+                name = data[u'crse_title'],
                 )
         course.save()
         request.user.course_set.add(course)
