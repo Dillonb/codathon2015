@@ -1,3 +1,5 @@
+{% extends "classapp/base.html" %}
+{% block title %}Personal Contact{% endblock %}
 {% block body %}
 {% if edit %}
 <h2>Editing the contact info of {{ UVMUser.first_name }} {{ UVMUser.last_name }}.</h2>
