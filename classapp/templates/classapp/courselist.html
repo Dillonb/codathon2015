@@ -1,17 +1,29 @@
 {% extends "classapp/base.html" %}
+    {% load staticfiles %}
 
 {% block body %}
 
 {% if user.is_authenticated %}
-<p>You're logged in, grats....you should add courses</p>
+<div class='courselist'>
 <p><a href="/courses/add">Add a course</a></p>
 <p><a href="/accounts/edit">Edit Personal Info</a></p>
-{% endif %}
+</div>
+<div class='sidebar'>
+
+    {% if user.is_authenticated %}
+    <div class='sidebar_info'>
+    	<img src='{% static "images/avatar_logo_default.png" %}' class='avatar_logo_default'>
+        <p class='welcome_text'>Hello, {{ user.full_name }}</p><a href="/accounts/logout">Logout</a>
+    </div>
+    {% endif %}
+<p>You're logged in, grats....you should add courses</p>
 
     {% for course in courses %}
 
-        <p>{{ course.term }} {{ course.subject }}{{ course.number }}</p>
+    <p><a href="{{ course.get_absolute_url }}">{{ course.term }} {{ course.subject }}{{ course.number }}</a></p>
 
     {% endfor %}
+</div>
+{% endif %}
 
 {% endblock %}

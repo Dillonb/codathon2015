@@ -2,8 +2,10 @@
 {% block title %}Personal Contact{% endblock %}
 {% block body %}
 
+
 <h2>Editing the contact info of {{ UVMUser.first_name }} {{ UVMUser.last_name }}.</h2>
 <form action="/editcontact/{{ UVMUser }}" method="POST">
+
 {% if form.non_field_errors %}
 	<div class= "alert alert-danger">
 		{{ form.non_field_errors }}

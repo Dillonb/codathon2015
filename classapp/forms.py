@@ -14,3 +14,6 @@ class ContactForm(ModelForm):
 class AddCourseForm(forms.Form):
     term = forms.CharField()
     crn = forms.IntegerField()
+
+class NewPostForm(forms.Form):
+    content = forms.CharField(widget=forms.Textarea)

@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/1.6/ref/settings/
 """
 
 import ldap
-from django_auth_ldap.config import LDAPSearch
+from django_auth_ldap.config import LDAPSearch, GroupOfNamesType
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
@@ -83,7 +83,7 @@ AUTH_LDAP_USER_ATTR_MAP = {
     "netid": "uid"
 }
 
-AUTH_LDAP_DENY_GROUP = "eduPersonAffiliation=Faculty"
+#AUTH_LDAP_DENY_GROUP = "eduPersonAffiliation=Faculty"
 
 AUTHENTICATION_BACKENDS = (
     'django.contrib.auth.backends.ModelBackend',

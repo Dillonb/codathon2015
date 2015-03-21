@@ -1,2 +1,11 @@
 @import "reset.scss";
 @import "home.scss";
+@import "courselist.scss";
+
+.sidebar {
+	float: right;
+	width: 25%;
+	padding: 0;
+	background: #426139;
+	height: calc(100vh);
+}

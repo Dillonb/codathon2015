@@ -3,6 +3,11 @@
   padding: 0;
   font-family: sans-serif; }
 
+.login .sidebar {
+  text-align: center; }
+.login .title_image {
+  height: 7.5em; }
+
 .home_logo {
   background: url("/static/images/home_logo_background.png");
   float: left;
@@ -16,18 +21,11 @@
     width: 250px; }
 
 .login_form {
-  float: right;
-  background: #426139;
-  width: calc(25% - 4em);
-  height: calc(100vh - 10em);
   color: #fff;
   font-size: 1.5em;
-  padding: 5em 2em 5em 2em;
   display: flex;
-  flex-direction: column; }
-  .login_form .title_image {
-    height: 5em;
-    margin-top: -5em; }
+  flex-direction: column;
+  padding: 0 2em; }
   .login_form label {
     margin: 1em 0 .1em; }
   .login_form input {
@@ -51,5 +49,29 @@
         -webkit-transition: .25s;
         -moz-transition: .25s;
         cursor: pointer; }
+
+.courselist {
+  background: url("/static/images/home_logo_background.png");
+  background-size: cover;
+  /* 	background: #d7d7d7; */
+  width: 75%;
+  float: left;
+  min-height: 100vh; }
+
+.sidebar_info {
+  height: calc(33vh - .5em);
+  text-align: center;
+  padding: .5em 0 0; }
+  .sidebar_info img {
+    height: 9em; }
+  .sidebar_info .welcome_text {
+    font-size: 1.25em; }
+
+.sidebar {
+  float: right;
+  width: 25%;
+  padding: 0;
+  background: #426139;
+  height: calc(100vh); }
 
 /*# sourceMappingURL=screen.css.map */

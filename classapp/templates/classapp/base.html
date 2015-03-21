@@ -8,10 +8,6 @@
 </head>
 <body>
 
-    {% if user.is_authenticated %}
-        Hello, {{ user.full_name }}<a href="/accounts/logout">Logout</a>
-    {% endif %}
-
     {% block body %}
     {% endblock %}
 </body>

@@ -57,6 +57,22 @@ def course_add_view(request):
         return render(request,"classapp/addcourse.html", {"form": form})
 
 @login_required
+def course_view_view(request,courseid):
+    post_form = NewPostForm(data=request.POST)
+    course = Course.objects.get(id=courseid)
+    if post_form.is_valid():
+        post = Post(
+                    user = request.user,
+                    course = course,
+                    content = post_form.cleaned_data['content']
+                )
+        post.save()
+
+    posts = Post.objects.filter(course=course).order_by('-time')
+    post_form = NewPostForm()
+    return render(request, "classapp/courseview.html", {"course": course, "posts": posts, "new_post_form": post_form })
+
+@login_required
 def info_edit_view(request):
     form = ContactForm(data=request.POST)
 

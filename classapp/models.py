@@ -44,6 +44,10 @@ class Course(models.Model):
 
     users = models.ManyToManyField("UVMUser")
 
+
+    def get_absolute_url(self):
+        return "/courses/view/" + str(self.id)
+
 class Post(models.Model):
     user = models.ForeignKey("UVMUser")
     course = models.ForeignKey("Course")

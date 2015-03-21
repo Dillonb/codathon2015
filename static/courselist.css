@@ -1,0 +1,18 @@
+.courselist {
+  background: url("/static/images/home_logo_background.png");
+  background-size: cover;
+  /* 	background: #d7d7d7; */
+  width: 75%;
+  float: left;
+  min-height: 100vh; }
+
+.sidebar_info {
+  height: calc(33vh - .5em);
+  text-align: center;
+  padding: .5em 0 0; }
+  .sidebar_info img {
+    height: 9em; }
+  .sidebar_info .welcome_text {
+    font-size: 1.25em; }
+
+/*# sourceMappingURL=courselist.css.map */

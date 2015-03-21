@@ -1,7 +1,8 @@
 {% extends "classapp/base.html" %}
 
 {% block body %}
-
+<p><a href="/accounts/profile">Home</a></p>
+<p><a href="/accounts/edit">Edit Personal Profile</a></p>
 <form action="/courses/add/" method="post">
     {% csrf_token %}
     {{ form }}
