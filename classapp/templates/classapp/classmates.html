@@ -9,15 +9,14 @@
         <div class="contact_card">
         	<div class='person_name'>
         	<img src='{% static "images/avatar_logo_default.png" %}' class='card_icon'>
-        	<span class='name'>{{ person.first_name }} {{ person.last_name }}</span>
+        	<span class='name'>{{ person.full_name }}</span>
         	</div>
         	
         	<div class='person_info'>
         	<ul class="contact_info_list">
         		
         		<li>
-        			UVM Email: {{ person.uvm_email }}
-                    <a href="mailto:{{ person.uvm_email }}?Subject=Message from a classmate via CatLynx"><br>Send Email</a>
+        			UVM Email: <a href="mailto:{{ person.uvm_email }}?Subject=Message from a classmate via CatLynx">{{ person.uvm_email }}</a>
         		</li>
 
         		{% if person.facebook_url %}
