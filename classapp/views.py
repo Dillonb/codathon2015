@@ -15,6 +15,10 @@ def course_list_view(request):
     courses = request.user.course_set.all()
     return render(request,"classapp/courselist.html",{"courses": courses})
 
+@login_required
+def course_add_view(request):
+    pass
+
 
 # def profile_card_view(request):
 # 	return render(request, "classapp/")
