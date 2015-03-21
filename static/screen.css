@@ -18,11 +18,11 @@
 .login_form {
   float: right;
   background: #426139;
-  width: calc(25% - 3em);
+  width: calc(25% - 4em);
   height: calc(100vh - 10em);
   color: #fff;
   font-size: 1.5em;
-  padding: 5em 1em 5em 2em;
+  padding: 5em 2em 5em 2em;
   display: flex;
   flex-direction: column; }
   .login_form .title_image {
