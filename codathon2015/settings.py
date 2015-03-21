@@ -83,6 +83,8 @@ AUTH_LDAP_USER_ATTR_MAP = {
     "netid": "uid"
 }
 
+AUTH_LDAP_DENY_GROUP = "eduPersonAffiliation=Faculty"
+
 AUTHENTICATION_BACKENDS = (
     'django.contrib.auth.backends.ModelBackend',
     'django_auth_ldap.backend.LDAPBackend',
