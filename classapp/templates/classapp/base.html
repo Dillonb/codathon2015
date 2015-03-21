@@ -24,9 +24,7 @@
 	        <p class='welcome_text'>Hello, {{ user.full_name }}</p><a href="/accounts/logout" class='logout'>Logout</a>
 	    </div>
 	    <div class='sidebar_tools'>
-		    {% if not courses %}
-			<p>You're logged in, grats....you should add courses</p>
-			{% endif %}
+		    
 			<ul class='nav'>
 				<li><a href="/accounts/profile/">Home</a></li>
 				<li><a href="/courses/add">Add a course</a></li>
