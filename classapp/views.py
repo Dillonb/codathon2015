@@ -60,6 +60,8 @@ def course_add_view(request):
 @login_required
 def course_view_view(request,courseid):
     post_form = NewPostForm(data=request.POST)
+    reply_form = NewReplyForm()
+
     course = get_object_or_404(Course, id=courseid)
     if post_form.is_valid():
         post = Post(
@@ -71,7 +73,33 @@ def course_view_view(request,courseid):
 
     posts = Post.objects.filter(course=course).order_by('-time')
     post_form = NewPostForm()
-    return render(request, "classapp/courseview.html", {"course": course, "posts": posts, "new_post_form": post_form })
+    return render(request, "classapp/courseview.html", {
+        "course": course,
+        "posts": posts,
+        "new_post_form": post_form,
+        "new_reply_form": reply_form
+        })
+
+
+@login_required
+def post_reply_view(request, postid):
+    form = NewReplyForm(data=request.POST)
+    if form.is_valid():
+        post = get_object_or_404(Post,id=postid)
+
+        comment = Comment(
+                user = request.user,
+                post = post,
+                content = form.cleaned_data['content'],
+            )
+        print("Saving a comment")
+        print(comment.user)
+        comment.save()
+        return redirect(post.course.get_absolute_url())
+    else:
+        print(request.POST)
+        print(form.errors)
+        return HttpResponse("Everything fucked up")
 
 
 @login_required
@@ -88,5 +116,6 @@ def info_edit_view(request):
         pass
     else:
         return render(request,"classapp/info_form.html", {"form": form})
+
 # def profile_card_view(request):
 # 	return render(request, "classapp/")
