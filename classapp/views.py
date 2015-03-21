@@ -72,6 +72,13 @@ def course_view_view(request,courseid):
     post_form = NewPostForm()
     return render(request, "classapp/courseview.html", {"course": course, "posts": posts, "new_post_form": post_form })
 
+
+@login_required
+def classmate_view(request,courseid):
+    course = Course.objects.get(id=courseid)
+    users =  UVMUser.objects.filter(course=course)
+    return render(request, "classapp/classmates.html",{"course": course, "users": users})
+
 @login_required
 def info_edit_view(request):
     form = ContactForm(data=request.POST)
