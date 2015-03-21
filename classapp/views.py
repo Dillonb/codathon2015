@@ -6,7 +6,10 @@ from classapp.forms import *
 import urllib, json
 
 def home_view(request):
-	return render(request, "classapp/home.html")
+    if request.user.is_authenticated:
+        return redirect("/courses/list")
+    else:
+        return render(request, "classapp/home.html")
 
 def logout_view(request):
     logout(request)

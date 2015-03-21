@@ -6,3 +6,5 @@ db.sqlite3
 *.swp
 static/images/Thumbs.db
 static/.sasscache
+static/images/Thumbs.db
+*.db
