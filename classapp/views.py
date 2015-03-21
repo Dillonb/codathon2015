@@ -151,5 +151,11 @@ def info_edit_view(request):
 def no_professors_view(request):
     return render(request, "classapp/noprofessors.html")
 
+@login_required
+def course_leave_view(request, courseid):
+    course = Course.objects.get(id=courseid)
+    course.users.remove(request.user)
+    return redirect("/courses/list")
+
 # def profile_card_view(request):
 # 	return render(request, "classapp/")
