@@ -3,5 +3,5 @@
 "mappings": "AAAA,UAAW;EACV,UAAU,EAAE,sCAAsC;;AAGnD,WAAY;EACX,UAAU,EAAE,OAAO",
 "sources": ["home.scss"],
 "names": [],
-"file": "screen.css"
+"file": "home.css"
 }

@@ -16,7 +16,7 @@ Form errors
 <div class="login">
 	<div class='home_logo'>
 	</div>
-    <form action="/accounts/login/" method="post">
+    <form action="/accounts/login/" method="post" class='login_form'>
         {% csrf_token %}
         Username
         {{ form.username }}
