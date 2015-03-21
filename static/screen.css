@@ -29,7 +29,8 @@
     margin: 1em 0 .1em; }
   .login_form input {
     font-size: 1.1em;
-    line-height: 1.4em; }
+    line-height: 1.4em;
+    padding: 0 .1em; }
     .login_form input[type='submit'] {
       border: 1px solid #759a2b;
       background: #87AD3C;
