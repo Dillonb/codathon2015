@@ -2,8 +2,26 @@
 
 {% block body %}
 
-<div class="home">
-	
+{% if request.user.is_authenticated %}
+ You are logged in yay
+{% else %}
+You are not logged in yet
+{% endif %}
+
+{% if form.errors %}
+Form errors
+{% endif %}
+
+
+<div class="login">
+    <form action="/accounts/login/" method="post">
+        {% csrf_token %}
+        Username
+        {{ form.username }}
+        Password
+        {{ form.password }}
+        <input type="submit" value="login">
+    </form>
 </div>
 
 {% endblock %}
