@@ -2,6 +2,10 @@
 
 {% block body %}
 
+{% if user.is_authenticated %}
+You're logged in, grats.
+{% endif %}
+
     {% for course in courses %}
 
         <p>{{ course.term }} {{ course.subject }}{{ course.number }}</p>
