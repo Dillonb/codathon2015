@@ -7,6 +7,7 @@
 	<div class='courselist_classes'>
 	
 	    {% for course in courses %}
+	    <a href="{{ course.get_absolute_url }}">
 		<div class='course_object'>
 	    <p><a href="{{ course.get_absolute_url }}">{{ course.term }} {{ course.subject }}{{ course.number }}</a></p>
 		</div>
