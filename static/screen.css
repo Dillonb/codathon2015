@@ -5,7 +5,15 @@
 
 .home_logo {
   background: url("/static/images/home_logo_background.png");
-  float: left; }
+  float: left;
+  height: 100vh;
+  background-size: cover;
+  width: calc(100vw - 19em); }
+  .home_logo .home_logo_image {
+    opacity: 0.8;
+    display: block;
+    margin: auto;
+    width: 200px; }
 
 .login_form {
   float: right;
