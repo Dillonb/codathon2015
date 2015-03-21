@@ -25,5 +25,26 @@
   padding: 1em 1em 1em 2em;
   display: flex;
   flex-direction: column; }
+  .login_form label {
+    margin: .5em 0 .1em; }
+  .login_form input {
+    height: 2em; }
+    .login_form input[type='submit'] {
+      border: 1px solid #759a2b;
+      background: #87AD3C;
+      font-size: 1em;
+      transition: .25s;
+      -webkit-transition: .25s;
+      -moz-transition: .25s;
+      color: #fff;
+      margin: .5em 0 0;
+      width: 5em;
+      margin: auto; }
+      .login_form input[type='submit']:hover {
+        background: #7c9c3b;
+        transition: .25s;
+        -webkit-transition: .25s;
+        -moz-transition: .25s;
+        cursor: pointer; }
 
 /*# sourceMappingURL=screen.css.map */
