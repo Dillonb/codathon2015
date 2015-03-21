@@ -34,3 +34,11 @@ body {
 	float: left;
 	min-height: 100vh;
 }
+.main_content article{
+    position: absolute;
+    width: 50%;
+    
+    top: 30%;
+    left: 10%;
+    padding: 2em;
+    background-color: white;}
