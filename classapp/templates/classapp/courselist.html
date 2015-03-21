@@ -3,7 +3,8 @@
 {% block body %}
 
 {% if user.is_authenticated %}
-You're logged in, grats....you should add courses
+<p>You're logged in, grats....you should add courses</p>
+<p><a href="/courses/add">Add a course</a></p>
 {% endif %}
 
     {% for course in courses %}

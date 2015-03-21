@@ -25,6 +25,32 @@
 	flex-direction: column;
 	
 	label {
+		margin: .5em 0 .1em;
+	}
+	
+	input {
+		height: 2em;
 		
+		&[type='submit'] {
+			border: 1px solid #759a2b;
+			background: #87AD3C;
+			font-size: 1em;
+			transition: .25s;
+			-webkit-transition: .25s;
+			-moz-transition: .25s;
+			color: #fff;
+			margin: .5em 0 0;
+			width: 5em;
+			margin: auto;
+			
+			&:hover {
+				background: #7c9c3b;
+				transition: .25s;
+				-webkit-transition: .25s;
+				-moz-transition: .25s;
+				cursor: pointer;
+			}
+	
+		}
 	}
 }

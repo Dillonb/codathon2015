@@ -12,4 +12,5 @@ class ContactForm(ModelForm):
                 }
 
 class AddCourseForm(forms.Form):
+    term = forms.CharField()
     crn = forms.IntegerField()
