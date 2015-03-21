@@ -3,12 +3,12 @@
 	float: left;
 	height: 100vh;
 	background-size: cover;
-	width: calc(100vw - 19em);
+	width: 75%;
 	
 	.home_logo_image {
 		opacity: 0.8;
 		display: block;
-		margin: auto;
+		margin: 25% auto;
 		width: 200px;
 	}
 }
@@ -16,7 +16,7 @@
 .login_form {
 	float: right;
 	background: #426139;
-	width: 12em;
+	width: 25%;
 	height: 100vh;
 	color: #fff;
 	font-size: 1.5em;
