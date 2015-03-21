@@ -72,7 +72,10 @@ body {
   width: 25%;
   padding: 0;
   background: #426139;
-  height: calc(100vh); }
+  height: 100vh;
+  color: #ddd; }
+  .sidebar a {
+    color: #163673; }
 
 .sidebar_info {
   height: calc(33vh - .5em);
@@ -83,29 +86,24 @@ body {
   .sidebar_info .welcome_text {
     font-size: 1.25em; }
 
+.sidebar_tools {
+  padding: 2em; }
+  .sidebar_tools ul {
+    list-style-type: none;
+    margin: 1em 0; }
+    .sidebar_tools ul li {
+      line-height: 1.25em; }
+
 .main_content {
   width: 75%;
-  
   float: left;
-  min-height: 100vh;}
-.main_content article{
+  min-height: 100vh; }
+  .main_content article {
     position: absolute;
     width: 50%;
-    
     top: 30%;
     left: 10%;
     padding: 2em;
-    background-color: white;}
+    background-color: white; }
 
-.helpcontent {
-  padding: 0 2em;
-  text-align: justify;
-}
-
-.helpbutton {
-  background: #ffffff;
-  padding: 5px 5px 5px 5px;
-  border: 1px solid #ffffff;
-  
-}
 /*# sourceMappingURL=screen.css.map */

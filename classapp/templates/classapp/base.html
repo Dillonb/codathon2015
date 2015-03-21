@@ -5,20 +5,6 @@
     <title>{% block title %}{% endblock %}</title>
     {% load staticfiles %}
     <link href='{% static "screen.css" %}' media="screen, projection" rel='stylesheet' type="text/css">
-
-<script src="//code.jquery.com/jquery-1.10.2.js"></script>
-<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
-
-<script>
-	$(document).ready(function(){
-		$("p").hide();
-
-	    $("button").click(function(){
-	        $("p").toggle(200);
-	    });
-	});
- </script>
-
 </head>
 <body>
 
@@ -27,16 +13,19 @@
     
     {% if user.is_authenticated %}
 	<div class='sidebar'>
-	
-	    {% if user.is_authenticated %}
 	    <div class='sidebar_info'>
 	    	<img src='{% static "images/avatar_logo_default.png" %}' class='avatar_logo_default'>
 	        <p class='welcome_text'>Hello, {{ user.full_name }}</p><a href="/accounts/logout" class='logout'>Logout</a>
-			<p><a href="/accounts/edit">Edit Personal Info</a></p>
 	    </div>
-	    {% endif %}
-		<p>You're logged in, grats....you should add courses</p>
-		<p><a href="/courses/add">Add a course</a></p>
+	    <div class='sidebar_tools'>
+			<p>You're logged in, grats....you should add courses</p>
+			<ul class='nav'>
+				<li><a href="/courses/add">Add a course</a></li>
+				<li><a href='/accounts/profile/'>Home</a></li>
+				<li><a href="/accounts/edit">Edit Personal Info</a></li>
+			</ul>
+			<p>Site description goes here. Site description goes here. Site description goes here. Site description goes here. Site description goes here.</p>
+	    </div>
 	</div>
 	{% endif %}
 </body>
