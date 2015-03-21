@@ -12,7 +12,12 @@ body {
 	width: 25%;
 	padding: 0;
 	background: #426139;
-	height: calc(100vh);
+	height: 100vh;
+	color: #ddd;
+	
+	a {
+		color: #163673;
+	}
 }
 
 .sidebar_info {
@@ -29,8 +34,30 @@ body {
 	}
 }
 
+.sidebar_tools {
+	padding: 2em;
+	
+	ul {
+		list-style-type: none;
+		margin: 1em 0;
+		
+		li {
+			line-height: 1.25em;
+		}
+	}
+}
+
 .main_content {
 	width: 75%;
 	float: left;
 	min-height: 100vh;
+	
+	article {
+	    position: absolute;
+	    width: 50%;
+	    top: 30%;
+	    left: 10%;
+	    padding: 2em;
+	    background-color: white;
+	}
 }

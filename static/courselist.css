@@ -2,10 +2,13 @@
   margin: 2em 0; }
   .courselist_classes .course_object {
     background: rgba(199, 199, 199, 0.87);
-    margin: 3em auto;
+    margin: .25em auto;
     width: 30em;
     border: 1px solid #949494;
-    border-radius: 15px 15px 0 0;
-    padding: 1.5em; }
+    padding: 1.25em; }
+    .courselist_classes .course_object .course_id {
+      color: #163673; }
+    .courselist_classes .course_object .course_info {
+      margin: .5em 0 0 0; }
 
 /*# sourceMappingURL=courselist.css.map */

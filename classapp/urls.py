@@ -10,5 +10,5 @@ urlpatterns = patterns('',
     url(r'^courses/view/(?P<courseid>\d+)$', 'classapp.views.course_view_view'),
     url(r'^postreply/(?P<postid>\d+)$', 'classapp.views.post_reply_view'),
     url(r'^courses/classmates/(?P<courseid>\d+)$', 'classapp.views.classmate_view'),
-    url(r'^$', 'django.contrib.auth.views.login', {'template_name': 'classapp/home.html'}),
+    url(r'^$', 'classapp.views.home_view')
 )
