@@ -10,7 +10,7 @@
   background-size: cover;
   width: 75%; }
   .home_logo .home_logo_image {
-    opacity: 0.8;
+    opacity: 0.5;
     display: block;
     margin: 25% auto 0;
     width: 250px; }
@@ -19,9 +19,12 @@
   float: right;
   background: #426139;
   width: calc(25% - 2em);
-  height: 100vh;
+  height: calc(100vh - 2em);
   color: #fff;
   font-size: 1.5em;
-  padding: 1em; }
+  padding: 1em;
+  text-align: center; }
+  .login_form input[type='text'] {
+    height: 2em; }
 
 /*# sourceMappingURL=screen.css.map */

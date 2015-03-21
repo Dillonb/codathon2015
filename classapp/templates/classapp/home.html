@@ -19,9 +19,9 @@ Form errors
 	</div>
     <form action="/accounts/login/" method="post" class='login_form'>
         {% csrf_token %}
-        Username
+        <p>Username</p>
         {{ form.username }}
-        Password
+        <p>Password</p>
         {{ form.password }}
         <input type="submit" value="login">
     </form>
