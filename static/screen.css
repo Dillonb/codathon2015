@@ -19,16 +19,17 @@
   float: right;
   background: #426139;
   width: calc(25% - 3em);
-  height: calc(100vh - 2em);
+  height: calc(100vh - 10em);
   color: #fff;
   font-size: 1.5em;
-  padding: 1em 1em 1em 2em;
+  padding: 5em 1em 5em 2em;
   display: flex;
   flex-direction: column; }
   .login_form label {
-    margin: .5em 0 .1em; }
+    margin: 1em 0 .1em; }
   .login_form input {
-    height: 2em; }
+    font-size: 1.1em;
+    line-height: 1.4em; }
     .login_form input[type='submit'] {
       border: 1px solid #759a2b;
       background: #87AD3C;
@@ -37,9 +38,9 @@
       -webkit-transition: .25s;
       -moz-transition: .25s;
       color: #fff;
-      margin: .5em 0 0;
+      margin: 1em auto 0;
       width: 5em;
-      margin: auto; }
+      height: 2em; }
       .login_form input[type='submit']:hover {
         background: #7c9c3b;
         transition: .25s;
