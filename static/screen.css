@@ -91,6 +91,36 @@
         list-style: none;
         line-height: 1.25em; }
 
+.post_form {
+  padding: 2em; }
+  .post_form textarea {
+    resize: none; }
+  .post_form label:not([for='id_anon']):after {
+    content: "\a";
+    white-space: pre; }
+  .post_form label:before {
+    content: "\a";
+    white-space: pre; }
+
+.posts .post {
+  list-style-type: none;
+  margin: 1em 0 2em 0; }
+.posts textarea {
+  resize: none;
+  width: 100%;
+  height: 4em; }
+.posts .comment {
+  list-style-type: none; }
+
+.comments {
+  margin: .25em 0 1em 0; }
+
+.comment_content {
+  margin: .25em 0 1em 0; }
+
+.see_classmates {
+  text-align: center; }
+
 body {
   background: url("/static/images/home_logo_background.png");
   background-size: cover; }
@@ -132,10 +162,10 @@ body {
   float: left;
   min-height: 100vh; }
   .main_content article {
-    position: absolute;
+    margin: 2em auto;
+    width: 45em;
     width: 50%;
     top: 30%;
-    left: 10%;
     padding: 2em;
     background-color: white; }
   .main_content h2 {
@@ -158,5 +188,8 @@ body {
   border: 1px solid #ffffff;
   background: #ffffff;
   padding: 5px 5px 5px 5px; }
+
+a {
+  color: #163673; }
 
 /*# sourceMappingURL=screen.css.map */

@@ -2,16 +2,16 @@
 
 {% block body %}
 
-<a href="/courses/classmates/{{ course.id }}" >See classmates.</a>
+<article class='course_view'>
+<h2>{{ course.term }} {{ course.subject }}{{ course.number }}, Section {{ course.section }}</h2>
+<div class='see_classmates'>
+<a href="/courses/classmates/{{ course.id }}" class='see_classmates'>See classmates.</a>
+</div>
 
-<article>
-<p>{{ course.term }} {{ course.subject }}{{ course.number }}, Section {{ course.section }}</p>
-
-<p>Make a post</p>
-
-<form action="{{ course.get_absolute_url }}" method="post">
+<form action="{{ course.get_absolute_url }}" method="post" class='post_form'>
     {% csrf_token %}
     {{ new_post_form }}
+    <br>
     <input type="submit" value="Post">
 </form>
 
@@ -31,21 +31,23 @@
                     <li class="comment">
                         {% if comment.anon %}
                             <p>Anonymous</p>
-                            <p>{{ comment.content }}</p>
+                            <p class='comment_content'>{{ comment.content }}</p>
                         {% else %}
                             <p>{{ comment.user.full_name }}</p>
-                            <p>{{ comment.content }}</p>
+                            <p class='comment_content'>{{ comment.content }}</p>
                         {% endif %}
                     </li>
                 {% endfor %}
             </ul>
-            <h2>REPLY</h2>
+            <h5>REPLY</h5>
             <form action="/postreply/{{ post.id }}" method="post">
                 {% csrf_token %}
                 {{ new_reply_form }}
                 <input type="submit" value="Post reply">
             </form>
         </li>
+        
+        <hr>
 
     {% endfor %}
 </ul>
