@@ -21,7 +21,7 @@ Form errors
 	    <img src='{% static "images/title.png" %}' class='title_image'>
 	    <form action="/accounts/login/" method="post" class='login_form'>
 	        {% csrf_token %}
-	        <label>Username</label>
+	        <label>NetID</label>
 	        {{ form.username }}
 	        
 	        <label>Password</label>

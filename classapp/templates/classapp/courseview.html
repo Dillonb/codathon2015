@@ -23,8 +23,13 @@
             <ul class="comments">
                 {% for comment in post.comment_set.all %}
                     <li class="comment">
-                        <p>{{ comment.user.full_name }}</p>
-                        <p>{{ comment.content }}</p>
+                        {% if post.anon %}
+                            <p>Anonymous</p>
+                            <p>{{ comment.content }}</p>
+                        {% else %}
+                            <p>{{ comment.user.full_name }}</p>
+                            <p>{{ comment.content }}</p>
+                        {% endif %}
                     </li>
                 {% endfor %}
             </ul>
