@@ -18,12 +18,18 @@
 <ul class="posts">
     {% for post in posts %}
         <li class="post">
-            <p>{{ post.user.full_name }} Made a post</p>
-            <p>{{ post.content }}</p>
+            {% if post.anon %}
+                <p>Anonymous</p>
+                <p>{{ post.content }}</p>
+            {% else %}
+                <p>{{ post.user.full_name }}</p>
+                <p>{{ post.content }}</p>
+            {% endif %}
+
             <ul class="comments">
                 {% for comment in post.comment_set.all %}
                     <li class="comment">
-                        {% if post.anon %}
+                        {% if comment.anon %}
                             <p>Anonymous</p>
                             <p>{{ comment.content }}</p>
                         {% else %}
