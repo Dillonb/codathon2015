@@ -1,6 +1,6 @@
 {
 "version": 3,
-"mappings": "AAAA,WAAY;EACX,UAAU,EAAE,OAAO",
+"mappings": "AAAA,WAAY;EACX,UAAU,EAAE,OAAO;EACnB,KAAK,EAAE,GAAG;EACV,KAAK,EAAE,IAAI",
 "sources": ["courselist.scss"],
 "names": [],
 "file": "courselist.css"
