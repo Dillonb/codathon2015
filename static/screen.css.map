@@ -1,7 +1,7 @@
 {
 "version": 3,
-"mappings": "",
-"sources": [],
+"mappings": "AAAA,UAAW;EACV,UAAU,EAAE,sCAAsC",
+"sources": ["screen.scss"],
 "names": [],
 "file": "screen.css"
 }
