@@ -3,15 +3,15 @@
 
 {% block body %}
 
-{% if user.is_authenticated %}
-<div class='courselist'>
-
-    {% for course in courses %}
-
-    <p><a href="{{ course.get_absolute_url }}">{{ course.term }} {{ course.subject }}{{ course.number }}</a></p>
-
-    {% endfor %}
+<div class='courselist main_content'>
+	<div class='courselist_classes'>
+	
+	    {% for course in courses %}
+	
+	    <p><a href="{{ course.get_absolute_url }}">{{ course.term }} {{ course.subject }}{{ course.number }}</a></p>
+	
+	    {% endfor %}
+	</div>
 </div>
-{% endif %}
 
 {% endblock %}

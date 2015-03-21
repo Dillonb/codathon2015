@@ -9,3 +9,11 @@
 	background: #426139;
 	height: calc(100vh);
 }
+
+.main_content {
+	background: url('/static/images/home_logo_background.png');
+	background-size: cover;
+	width: 75%;
+	float: left;
+	min-height: 100vh;
+}
