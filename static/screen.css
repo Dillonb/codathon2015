@@ -96,7 +96,8 @@ body {
   background-size: cover; }
 
 .errorlist li {
-  list-style-type: none; }
+  list-style-type: none;
+  display: none; }
 
 .sidebar {
   float: right;
@@ -137,9 +138,20 @@ body {
     left: 10%;
     padding: 2em;
     background-color: white; }
+  .main_content h2 {
+    text-align: center; }
+  .main_content #form_input p {
+    padding: 3px;
+    padding-left: 2em; }
+  .main_content #course_form {
+    font-size: 80%;
+    text-align: center; }
 
 .help_content {
   padding: 0 2em;
+  text-align: justify; }
+
+.help_content2 {
   text-align: justify; }
 
 .help_button {

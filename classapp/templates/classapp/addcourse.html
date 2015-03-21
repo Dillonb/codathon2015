@@ -3,11 +3,11 @@
 {% block body %}
 <article>
     <h2>Add a course that you're taking</h2>
+    <p id="course_form">Either input course CRN number or subject, number, and section.</p>
 <br>
-<form action="/courses/add/" method="post">
+<form id="form_input" action="/courses/add/" method="post">
     {% csrf_token %}
     {{ form.as_p }}
-<br>
     <input type="submit" value="Submit">
 </form>
 </article>
