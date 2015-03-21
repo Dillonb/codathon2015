@@ -9,8 +9,13 @@
 	    {% for course in courses %}
 	    <a href="{{ course.get_absolute_url }}">
 		<div class='course_object'>
-	    <p><a href="{{ course.get_absolute_url }}">{{ course.term }} {{ course.subject }}{{ course.number }}</a></p>
+	    	<p>
+	    		{{ course.subject }}
+	    		
+	    		{{ course.number }}
+	    	</p>
 		</div>
+		</a>
 	    {% endfor %}
 	</div>
 </div>
