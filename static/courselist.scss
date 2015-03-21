@@ -1,5 +1,12 @@
 .courselist {
-	background: #d7d7d7;
+	background: url('/static/images/home_logo_background.png');
+	background-size: cover;
+/* 	background: #d7d7d7; */
 	width: 75%;
 	float: left;
+	min-height: 100vh;
+}
+
+.sidebar_icon_bar {
+	height: 5em;
 }
