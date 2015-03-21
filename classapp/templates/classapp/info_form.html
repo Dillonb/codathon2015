@@ -1,6 +1,11 @@
 {% extends "classapp/base.html" %}
 {% block title %}Personal Contact{% endblock %}
 {% block body %}
+<div class='sidebar'>
+    {% if user.is_authenticated %}
+        Hello, {{ user.full_name }}<a href="/accounts/logout">Logout</a>
+    {% endif %}
+</div>
 <p><a href="/accounts/profile">Home</a></p>
 <p><a href="/courses/add">Add a course</a></p>
 {% if edit %}
