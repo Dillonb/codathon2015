@@ -124,8 +124,7 @@ def info_edit_view(request):
 
 
         user.save()
-        return redirect("/courses/list")
-    else:
-        return render(request,"classapp/info_form.html", {"form": form, "person":request.user})
+         
+    return render(request,"classapp/info_form.html", {"form": form, "person":request.user})
 # def profile_card_view(request):
 # 	return render(request, "classapp/")

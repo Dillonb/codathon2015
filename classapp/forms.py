@@ -5,11 +5,15 @@ from django.contrib.auth.models import User
 from django.core.exceptions import ValidationError
 
 class ContactForm(ModelForm):
+    
+    facebook_url = forms.CharField(required=False)
+    additional_email_1 = forms.CharField(required=False)
+    additional_email_2 = forms.CharField(required=False)
+    phone_number = forms.CharField(required=False)
+    
     class Meta:
         model = UVMUser
-        fields = ['facebook_url','additional_email_1', 'additional_email_2', 'phone_number']
-        widgets = {
-                }
+        fields = ['facebook_url', 'additional_email_1','additional_email_2','phone_number']
 
 class AddCourseForm(forms.Form):
     term = forms.CharField()
