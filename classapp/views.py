@@ -105,7 +105,7 @@ def post_reply_view(request, postid):
 @login_required
 def classmate_view(request,courseid):
     course = get_object_or_404(Course, id=courseid)
-    users =  UVMUser.objects.filter(course=course)
+    users =  UVMUser.objects.filter(course=course).order_by("last_name")
     return render(request, "classapp/classmates.html",{"course": course, "users": users})
 
 @login_required
