@@ -8,7 +8,7 @@
 	.home_logo_image {
 		opacity: 0.8;
 		display: block;
-		margin: 25% auto;
+		margin: 25% auto 0;
 		width: 250px;
 	}
 }
@@ -16,8 +16,9 @@
 .login_form {
 	float: right;
 	background: #426139;
-	width: 25%;
+	width: calc(25% - 2em);
 	height: 100vh;
 	color: #fff;
 	font-size: 1.5em;
+	padding: 1em;
 }
