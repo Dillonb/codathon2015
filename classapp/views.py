@@ -107,8 +107,9 @@ def course_view_view(request,courseid):
 @login_required
 def post_reply_view(request, postid):
     form = NewReplyForm(data=request.POST)
+    post = get_object_or_404(Post,id=postid)
+
     if form.is_valid():
-        post = get_object_or_404(Post,id=postid)
 
         comment = Comment(
                 user = request.user,
