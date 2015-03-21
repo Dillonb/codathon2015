@@ -7,7 +7,13 @@
     <link href='{% static "screen.css" %}' media="screen, projection" rel='stylesheet' type="text/css">
 </head>
 <body>
-    <a href="/accounts/logout">Logout</a>
+
+    {% if user.is_authenticated %}
+        <a href="/accounts/login">Login</a>
+    {% endif %}
+        <a href="/accounts/logout">Logout</a>
+    {% endif %}
+
     {% block body %}
     {% endblock %}
 </body>
