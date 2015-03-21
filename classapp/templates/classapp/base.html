@@ -18,10 +18,12 @@
 	        <p class='welcome_text'>Hello, {{ user.full_name }}</p><a href="/accounts/logout" class='logout'>Logout</a>
 	    </div>
 	    <div class='sidebar_tools'>
+		    {% if not courses %}
 			<p>You're logged in, grats....you should add courses</p>
+			{% endif %}
 			<ul class='nav'>
+				<li><a href="/accounts/profile/">Home</a></li>
 				<li><a href="/courses/add">Add a course</a></li>
-				<li><a href='/accounts/profile/'>Home</a></li>
 				<li><a href="/accounts/edit">Edit Personal Info</a></li>
 			</ul>
 			<p>CatLynx is a web app that connects classmates in order to collaborate, get help, and share insights.
