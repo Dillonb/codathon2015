@@ -1,6 +1,7 @@
 @import "reset.scss";
 @import "home.scss";
 @import "courselist.scss";
+@import "classmates.scss";
 
 body {
 	background: url('/static/images/home_logo_background.png');
@@ -68,7 +69,7 @@ body {
 }
 
 .help_button {
+  border: 1px solid #ffffff;
   background: #ffffff;
   padding: 5px 5px 5px 5px;
-  border: 1px solid #ffffff;
 }
