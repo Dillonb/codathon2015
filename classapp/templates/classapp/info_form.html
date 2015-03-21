@@ -27,7 +27,7 @@
 	    
     <h3>Link Social Media</h3>
     <span class = "form_item" id = "facebook_url">
-    	<label for="id_facebook_url">Use as primary email</label> 
+    	<label for="id_facebook_url">Facebook profile URL</label> 
     	{{ form.facebook_url }}
     </span>
 {% if form.facebook_url.errors %}
@@ -39,11 +39,11 @@
     
     <h3>Additional email addresses to contact you at</h3>
     <span class = "form_item" id = "additional_email_1">
-    	<label for="id_additional_email_1">Use  email</label> 
+    	<label for="id_additional_email_1">Additional Email</label> 
     	{{ form.additional_email_1 }}
     </span>
     <span class = "form_item" id = "additional_email_2">
-    	<label for="id_additional_email_2">Use  email</label> 
+    	<label for="id_additional_email_2">Additional Email</label> 
     	{{ form.additional_email_2 }}
     </span>
 {% if form.additional_email.errors %}
@@ -52,6 +52,16 @@
 	</div>
 {% endif %}
 
+    <h3>Phone</h3>
+    <span class = "form_item" id = "phone_number">
+        <label for="id_phone_number">Enter </label> 
+        {{ form.phone_number }}
+    </span>
+{% if form.phone_number.errors %}
+    <div class = "field-error">
+        {{ form.phone_number.errors }}
+    </div>
+{% endif %}
     <span class = "form_item formMisc submitButton"><input type="submit" class="btn btn-default" value="Save"></span>
 </form>
 {% endblock %}

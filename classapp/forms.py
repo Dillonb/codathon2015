@@ -7,7 +7,7 @@ from django.core.exceptions import ValidationError
 class ContactForm(ModelForm):
     class Meta:
         model = UVMUser
-        fields = ['uvm_email','facebook_url','additional_email_1', 'additional_email_2']
+        fields = ['uvm_email','facebook_url','additional_email_1', 'additional_email_2', 'phone']
         widgets = {
                 }
 

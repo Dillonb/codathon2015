@@ -28,7 +28,7 @@ class UVMUser(AbstractBaseUser):
     facebook_url = models.CharField(max_length=100, null=True)
     additional_email_1 = models.CharField(max_length=100, null=True)
     additional_email_2 = models.CharField(max_length=100, null=True)
-
+    phone_number = models.CharField(max_length=14, null=True)
     #user_picture goes here later
 
     USERNAME_FIELD = 'netid'
