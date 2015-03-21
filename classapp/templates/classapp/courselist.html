@@ -7,6 +7,8 @@
 <p>You're logged in, grats....you should add courses</p>
 <p><a href="/courses/add">Add a course</a></p>
 <p><a href="/accounts/edit">Edit Personal Info</a></p>
+<div class='sidebar'>
+</div>
 {% endif %}
 
     {% for course in courses %}
@@ -14,5 +16,6 @@
         <p>{{ course.term }} {{ course.subject }}{{ course.number }}</p>
 
     {% endfor %}
+</div>
 
 {% endblock %}

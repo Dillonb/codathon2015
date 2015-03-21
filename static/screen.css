@@ -15,19 +15,21 @@
     margin: 25% auto 0;
     width: 250px; }
 
-.login_form {
+.sidebar {
   float: right;
-  background: #426139;
   width: calc(25% - 4em);
-  height: calc(100vh - 10em);
+  padding: 5em 2em 5em 2em;
+  background: #426139;
+  height: calc(100vh - 10em); }
+  .sidebar .title_image {
+    height: 7.5em;
+    margin-top: -5em; }
+
+.login_form {
   color: #fff;
   font-size: 1.5em;
-  padding: 5em 2em 5em 2em;
   display: flex;
   flex-direction: column; }
-  .login_form .title_image {
-    height: 5em;
-    margin-top: -5em; }
   .login_form label {
     margin: 1em 0 .1em; }
   .login_form input {
@@ -51,5 +53,8 @@
         -webkit-transition: .25s;
         -moz-transition: .25s;
         cursor: pointer; }
+
+.courselist {
+  background: #d7d7d7; }
 
 /*# sourceMappingURL=screen.css.map */
