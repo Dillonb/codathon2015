@@ -7,12 +7,16 @@
     <link href='{% static "screen.css" %}' media="screen, projection" rel='stylesheet' type="text/css">
 </head>
 <body>
+    {% if user.is_authenticated %}
     <div class="main_content">
+    {% endif %}
     {% block body %}
     
     
     {% endblock %}
+    {% if user.is_authenticated %}
     </div>
+    {% endif %}
     {% if user.is_authenticated %}
 	<div class='sidebar'>
 	    <div class='sidebar_info'>
