@@ -28,3 +28,26 @@ class UVMUser(AbstractBaseUser):
     USERNAME_FIELD = 'netid'
     objects = UVMUserManager()
 
+class Course(models.Model):
+    term = models.CharField(max_length=40)
+    subject = models.CharField(max_length=10)
+    number = models.IntegerField()
+    crn = models.IntegerField()
+    section = models.CharField(max_length=2)
+    instructor = models.TextField()
+
+class CourseMembership(models.Model):
+    user = models.ForeignKey("UVMUser")
+    course = models.ForeignKey("Course")
+
+class Post(models.Model):
+    user = models.ForeignKey("UVMUser")
+    course = models.ForeignKey("Course")
+    content = models.TextField()
+    time = models.DateTimeField(auto_now=True)
+
+class Comment(models.Model):
+    user = models.ForeignKey("UVMUser")
+    post = models.ForeignKey("Post")
+    content = models.TextField()
+    time = models.DateTimeField(auto_now=True)
