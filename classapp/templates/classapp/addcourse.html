@@ -1,7 +1,6 @@
 {% extends "classapp/base.html" %}
 
 {% block body %}
-<div class='main_content'>
 <article>
 <form action="/courses/add/" method="post">
     {% csrf_token %}
@@ -10,5 +9,4 @@
     <input type="submit" value="Submit">
 </form>
 </article>
-</div>
 {% endblock %}
