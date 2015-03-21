@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.contrib.auth import logout
 from django.contrib.auth.decorators import login_required
 from classapp.models import *
+from classapp.forms import *
 
 def home_view(request):
 	return render(request, "classapp/home.html")
@@ -17,8 +18,12 @@ def course_list_view(request):
 
 @login_required
 def course_add_view(request):
-    pass
+    form = AddCourseForm(request)
 
+    if form.is_valid():
+        pass # Do a thing
+    else:
+        return render(request,"classapp/addcourse.html")
 
 # def profile_card_view(request):
 # 	return render(request, "classapp/")

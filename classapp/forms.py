@@ -1,6 +1,6 @@
 from django import forms
 from django.forms import ModelForm
-from codathon2015.models import UVMUser
+from classapp.models import *
 from django.contrib.auth.models import User
 from django.core.exceptions import ValidationError
 
@@ -10,3 +10,6 @@ class ContactForm(ModelForm):
         fields = ['uvm_email',]
         widgets = {
                 }
+
+class AddCourseForm(forms.Form):
+    crn = forms.IntegerField()
