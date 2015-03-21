@@ -3,10 +3,24 @@
 	justify-content: center;
 	
 	.contact_card {
-		border: 1px solid #e1e1e1;
-		background: #d8d8d8;
+		background: #f5f5f5;
 		height: 10em;
 		width: 20em;
+		margin: 2em;
+		
+		.person_name {
+			text-align: center;
+			background: #87AD3C;
+			height: 2em;
+			color: #fff;
+			font-size: 1.5em;
+			line-height: 2em;
+			margin: 0 0 2em 0;
+			
+			.card_icon {
+				width: 3em;
+			}
+		}
 		
 		ul {
 			list-style: none;
