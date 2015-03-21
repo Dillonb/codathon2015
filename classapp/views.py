@@ -8,6 +8,7 @@ def home_view(request):
 
 def logout_view(request):
     logout(request)
+    return render(request, "classapp/loggedout.html")
 
 @login_required
 def course_list_view(request):
