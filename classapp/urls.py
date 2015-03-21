@@ -6,5 +6,5 @@ urlpatterns = patterns('',
     url(r'^accounts/profile/$', 'classapp.views.course_list_view'),
     url(r'^courses/list/$', 'classapp.views.course_list_view'),
     url(r'^courses/add/$', 'classapp.views.course_add_view'),
-    url(r'^$', 'django.contrib.auth.views.login', {'template_name': 'classapp/login.html'}),
+    url(r'^$', 'django.contrib.auth.views.login', {'template_name': 'classapp/home.html'}),
 )
