@@ -25,9 +25,9 @@ class UVMUser(AbstractBaseUser):
     full_name = models.CharField(max_length=150,null=True)
     department = models.CharField(max_length=40,null=True)
 
-    facebook_url = models.TextField(null=True)
-    additional_email_1 = models.TextField(null=True)
-    additional_email_2 = models.TextField(null=True)
+    facebook_url = models.CharField(max_length=100, null=True)
+    additional_email_1 = models.CharField(max_length=100, null=True)
+    additional_email_2 = models.CharField(max_length=100, null=True)
 
     #user_picture goes here later
 
