@@ -30,9 +30,42 @@ class AddCourseForm(forms.Form):
 
         return choices
 
+    def clean(self):
+        cleaned_data = super(AddCourseForm, self).clean()
+        crn_good = False
+        subject_good = False
+        number_good = False
+        section_good = False
+
+        if u'crn' in cleaned_data.keys():
+            crn_good = not cleaned_data[u'crn'] is None
+        if u'subject' in cleaned_data.keys():
+            subject_good = not cleaned_data[u'subject'] is None
+        if u'number' in cleaned_data.keys():
+            number_good = not cleaned_data[u'number'] is None
+        if u'section' in cleaned_data.keys():
+            section_good = not cleaned_data[u'section'] is None
+
+        if subject_good:
+            cleaned_data[u'subject'] = cleaned_data[u'subject'].upper()
+
+        if not (crn_good or (subject_good and section_good)):
+            raise forms.ValidationError("Fill in either the CRN or the Subject/Section fields!")
+
+        return cleaned_data
+
 
     term = forms.ChoiceField(choices=getTermChoices())
-    crn = forms.IntegerField()
+    # Either CRN
+    crn = forms.IntegerField(required=False)
+    # Or subject, number, section
+    subject = forms.CharField(required=False)
+    number = forms.IntegerField(required=False)
+    section = forms.CharField(required=False)
+
+
+
+
 
 
 

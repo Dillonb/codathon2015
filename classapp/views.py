@@ -33,20 +33,33 @@ def course_list_view(request):
 def course_add_view(request):
     form = AddCourseForm(data=request.POST)
     if form.is_valid():
-        url = "https://www.uvm.edu/_api.d/v1/course-catalogue/term/" + str(form.cleaned_data['term']) + "/crn/" + str(form.cleaned_data['crn'])
+        print (form.cleaned_data)
+        url = ""
+        using_crn = not form.cleaned_data['crn'] is None
+        if using_crn:
+            url = "https://www.uvm.edu/_api.d/v1/course-catalogue/term/" + str(form.cleaned_data['term']) + "/crn/" + str(form.cleaned_data['crn'])
+        else:
+            url = "https://www.uvm.edu/_api.d/v1/course-catalogue/term/" + str(form.cleaned_data['term']) + "/subject/" + str(form.cleaned_data['subject']) + "/course/" + str(form.cleaned_data['number'])
+
         response = urllib.urlopen(url)
         data = json.loads(response.read())
         print(data)
         data = data[u'sections']
+        if not using_crn:
+            for course in data:
+                if course[u'section'] == form.cleaned_data['section']:
+                    data = course
+                    break
+
         instructor_str = "None"
         if len(data[u'instructors']) == 0:
-            return render(request,"classapp/addcourse.html", {"form": form})
+            pass
         if len(data[u'instructors']) == 1:
             instructor_str = data[u'instructors'][0][u'first'] + " " + data[u'instructors'][0][u'last']
         else:
             instructor_str = ""
-            for instructor in data.instructors:
-                instructor_str += (instructor.first + " " + instructor.last)
+            for instructor in data[u'instructors']:
+                instructor_str += (instructor[u'first'] + " " + instructor[u'last'] + " ")
 
         course,created = Course.objects.get_or_create(
                 term = data[u'term_code'],
