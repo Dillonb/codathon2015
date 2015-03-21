@@ -5,12 +5,14 @@
 
 .home_logo {
   background: url("/static/images/home_logo_background.png");
-  width: 5em;
-  height: 10em; }
+  float: left; }
 
 .login_form {
-  background: #288622;
-  width: 5em;
-  float: right; }
+  float: right;
+  background: #426139;
+  width: 12em;
+  height: 100vh;
+  color: #fff;
+  font-size: 1.5em; }
 
 /*# sourceMappingURL=screen.css.map */
