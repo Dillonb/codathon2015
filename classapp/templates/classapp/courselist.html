@@ -1,4 +1,5 @@
 {% extends "classapp/base.html" %}
+    {% load staticfiles %}
 
 {% block body %}
 
@@ -10,18 +11,19 @@
 <div class='sidebar'>
 
     {% if user.is_authenticated %}
-    <div class='sidebar_icon_bar'>
-        Hello, {{ user.full_name }}<a href="/accounts/logout">Logout</a>
+    <div class='sidebar_info'>
+    	<img src='{% static "images/avatar_logo_default.png" %}' class='avatar_logo_default'>
+        <p class='welcome_text'>Hello, {{ user.full_name }}</p><a href="/accounts/logout">Logout</a>
     </div>
     {% endif %}
 <p>You're logged in, grats....you should add courses</p>
-</div>
-{% endif %}
 
     {% for course in courses %}
 
     <p><a href="{{ course.get_absolute_url }}">{{ course.term }} {{ course.subject }}{{ course.number }}</a></p>
 
     {% endfor %}
+</div>
+{% endif %}
 
 {% endblock %}

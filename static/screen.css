@@ -3,6 +3,11 @@
   padding: 0;
   font-family: sans-serif; }
 
+.login .sidebar {
+  text-align: center; }
+.login .title_image {
+  height: 7.5em; }
+
 .home_logo {
   background: url("/static/images/home_logo_background.png");
   float: left;
@@ -19,7 +24,8 @@
   color: #fff;
   font-size: 1.5em;
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  padding: 0 2em; }
   .login_form label {
     margin: 1em 0 .1em; }
   .login_form input {
@@ -52,17 +58,20 @@
   float: left;
   min-height: 100vh; }
 
-.sidebar_icon_bar {
-  height: 5em; }
+.sidebar_info {
+  height: calc(33vh - .5em);
+  text-align: center;
+  padding: .5em 0 0; }
+  .sidebar_info img {
+    height: 9em; }
+  .sidebar_info .welcome_text {
+    font-size: 1.25em; }
 
 .sidebar {
   float: right;
-  width: calc(25% - 4em);
-  padding: 5em 2em 5em 2em;
+  width: 25%;
+  padding: 0;
   background: #426139;
-  height: calc(100vh - 10em); }
-  .sidebar .title_image {
-    height: 7.5em;
-    margin-top: -5em; }
+  height: calc(100vh); }
 
 /*# sourceMappingURL=screen.css.map */

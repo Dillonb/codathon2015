@@ -1,3 +1,12 @@
+.login {
+	.sidebar {
+		text-align: center;
+	}
+	.title_image {
+		height: 7.5em;
+	}
+}
+
 .home_logo {
 	background: url('/static/images/home_logo_background.png');
 	float: left;
@@ -18,6 +27,7 @@
 	font-size: 1.5em;
 	display: flex;
 	flex-direction: column;
+	padding: 0 2em;
 		
 	label {
 		margin: 1em 0 .1em;

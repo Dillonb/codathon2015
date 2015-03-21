@@ -13,7 +13,7 @@
 <form action="/editcontact/{{ UVMUser }}" method="POST">
 {% else %}
 <h2>Creating contact info of {{ UVMUser.first_name }} {{ UVMUser.last_name }}.</h2>
-<form action="/creatcontact/{{ UVMUser }}" method="POST">
+<form action="/createcontact/{{ UVMUser }}" method="POST">
 {% endif %}
 {% if form.non_field_errors %}
 	<div class= "alert alert-danger">
