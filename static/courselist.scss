@@ -1,13 +1,12 @@
-.sidebar_info {
-	height: calc(33vh - .5em);
-	text-align: center;
-	padding: .5em 0 0;
+.courselist_classes {
+	margin: 2em 0;
 	
-	img {
-		height: 9em;
-	}
-	
-	.welcome_text {
-		font-size: 1.25em;
+	.course_object {
+		background: rgba(199,199,199,0.87);
+		margin: auto;
+		width: 30em;
+		border: 1px solid #949494;
+		border-radius: 15px 15px 0 0;
+		padding: 1.5em;
 	}
 }

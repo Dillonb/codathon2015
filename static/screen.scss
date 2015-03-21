@@ -10,6 +10,20 @@
 	height: calc(100vh);
 }
 
+.sidebar_info {
+	height: calc(33vh - .5em);
+	text-align: center;
+	padding: .5em 0 0;
+	
+	img {
+		height: 9em;
+	}
+	
+	.welcome_text {
+		font-size: 1.25em;
+	}
+}
+
 .main_content {
 	background: url('/static/images/home_logo_background.png');
 	background-size: cover;
