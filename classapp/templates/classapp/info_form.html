@@ -3,7 +3,7 @@
 {% block body %}
 
 <article>
-    <h2>Editing the contact info of {{ person.first_name }} {{ person.last_name }}.</h2>
+    <h2>Editing the contact info of {{ person.first_name }} {{ person.last_name }}.</h2><br>
     <form action="/accounts/edit/" method="POST">
 
     {% if form.non_field_errors %}
@@ -13,8 +13,8 @@
     {% endif %}
         
         {% csrf_token %}
-        <h3>We already have your UVM email: {{ person.uvm_email }}</h3>
-            
+        <h3>We already have your UVM email: <span style='font-style: italic;'>{{ person.uvm_email }}</span></h3>
+            <br>
         <h3>Link Social Media</h3>
         <span class = "form_item" id = "facebook_url">
         	<label for="id_facebook_url">Facebook profile URL</label> 
@@ -26,12 +26,14 @@
     	</div>
     {% endif %}
 
+            <br><br>
         
         <h3>Additional email addresses to contact you at</h3>
         <span class = "form_item" id = "additional_email_1">
         	<label for="id_additional_email_1">Additional Email</label> 
         	{{ form.additional_email_1 }}
         </span>
+            <br>
         <span class = "form_item" id = "additional_email_2">
         	<label for="id_additional_email_2">Additional Email</label> 
         	{{ form.additional_email_2 }}
@@ -41,7 +43,10 @@
     		{{ form.additional_email.errors }}
     	</div>
     {% endif %}
-
+            
+            <br>
+            <br>
+        
         <h3>Phone</h3>
         <span class = "form_item" id = "phone_number">
             <label for="id_phone_number">Enter </label> 
@@ -52,6 +57,7 @@
             {{ form.phone_number.errors }}
         </div>
     {% endif %}
+        <br><br>
         <span class = "form_item submit_button"><input type="submit" class="btn btn-default" value="Save"></span>
     </form>
 </article>

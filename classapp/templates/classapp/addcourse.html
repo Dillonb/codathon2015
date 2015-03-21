@@ -2,9 +2,12 @@
 
 {% block body %}
 <article>
+    <h2>Add a course that you're taking</h2>
+<br>
 <form action="/courses/add/" method="post">
     {% csrf_token %}
-    {{ form }}
+    {{ form.as_p }}
+<br>
     <input type="submit" value="Submit">
 </form>
 </article>

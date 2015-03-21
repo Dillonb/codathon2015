@@ -56,8 +56,12 @@ class Post(models.Model):
     content = models.TextField()
     time = models.DateTimeField(auto_now=True)
 
+    anon = models.BooleanField(default=False)
+
 class Comment(models.Model):
     user = models.ForeignKey("UVMUser")
     post = models.ForeignKey("Post")
     content = models.TextField()
     time = models.DateTimeField(auto_now=True)
+
+    anon = models.BooleanField(default=False)

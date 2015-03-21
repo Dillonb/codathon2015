@@ -89,7 +89,8 @@ def course_view_view(request,courseid):
         post = Post(
                     user = request.user,
                     course = course,
-                    content = post_form.cleaned_data['content']
+                    content = post_form.cleaned_data['content'],
+                    anon = post_form.cleaned_data['anon'],
                 )
         post.save()
 
@@ -113,6 +114,7 @@ def post_reply_view(request, postid):
                 user = request.user,
                 post = post,
                 content = form.cleaned_data['content'],
+                anon = form.cleaned_data['anon'],
             )
         print("Saving a comment")
         print(comment.user)

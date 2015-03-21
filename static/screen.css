@@ -95,6 +95,9 @@ body {
   background: url("/static/images/home_logo_background.png");
   background-size: cover; }
 
+.errorlist li {
+  list-style-type: none; }
+
 .sidebar {
   float: right;
   width: 25%;

@@ -71,6 +71,8 @@ class AddCourseForm(forms.Form):
 
 class NewPostForm(forms.Form):
     content = forms.CharField(widget=forms.Textarea)
+    anon = forms.BooleanField(required=False,label="Post anonymously")
 
 class NewReplyForm(forms.Form):
     content = forms.CharField(widget=forms.Textarea)
+    anon = forms.BooleanField(required=False,label="Post anonymously")
