@@ -18,6 +18,7 @@ Form errors
 		<img src='{% static "images/logo.png" %}' class='home_logo_image'>
 	</div>
     <form action="/accounts/login/" method="post" class='login_form'>
+    <img src='{% static "images/title.png" %}' class='title_image'>
         {% csrf_token %}
         <label>Username</label>
         {{ form.username }}

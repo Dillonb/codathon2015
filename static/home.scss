@@ -23,6 +23,12 @@
 	padding: 5em 1em 5em 2em;
 	display: flex;
 	flex-direction: column;
+	
+	.title_image {
+		height: 5em;
+		margin-top: -5em;
+		
+	}
 		
 	label {
 		margin: 1em 0 .1em;

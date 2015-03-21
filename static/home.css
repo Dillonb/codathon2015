@@ -20,6 +20,9 @@
   padding: 5em 1em 5em 2em;
   display: flex;
   flex-direction: column; }
+  .login_form .title_image {
+    height: 5em;
+    margin-top: -5em; }
   .login_form label {
     margin: 1em 0 .1em; }
   .login_form input {
