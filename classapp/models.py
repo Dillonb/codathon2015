@@ -36,9 +36,7 @@ class Course(models.Model):
     section = models.CharField(max_length=2)
     instructor = models.TextField()
 
-class CourseMembership(models.Model):
-    user = models.ForeignKey("UVMUser")
-    course = models.ForeignKey("Course")
+    users = models.ManyToManyField("UVMUser")
 
 class Post(models.Model):
     user = models.ForeignKey("UVMUser")
