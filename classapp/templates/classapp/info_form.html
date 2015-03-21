@@ -5,7 +5,7 @@
 <div class="main_content">
     <article>
 <h2>Editing the contact info of {{ person.first_name }} {{ person.last_name }}.</h2>
-<form action="/editcontact/{{ UVMUser }}" method="POST">
+<form action="/accounts/edit/" method="POST">
 
 {% if form.non_field_errors %}
 	<div class= "alert alert-danger">

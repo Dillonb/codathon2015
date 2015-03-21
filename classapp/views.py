@@ -113,7 +113,18 @@ def info_edit_view(request):
     form = ContactForm(data=request.POST)
 
     if form.is_valid():
-        pass
+        print (form.cleaned_data)
+
+
+        user = request.user
+        user.facebook_url = form.cleaned_data['facebook_url']
+        user.additional_email_1 = form.cleaned_data['additional_email_1']
+        user.additional_email_2 = form.cleaned_data['additional_email_2']
+        user.phone_number = form.cleaned_data['phone_number']
+
+
+        user.save()
+        return redirect("/courses/list")
     else:
         return render(request,"classapp/info_form.html", {"form": form, "person":request.user})
 # def profile_card_view(request):
