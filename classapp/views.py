@@ -32,7 +32,6 @@ def course_list_view(request):
 @login_required
 def course_add_view(request):
     form = AddCourseForm(data=request.POST)
-
     if form.is_valid():
         url = "https://www.uvm.edu/_api.d/v1/course-catalogue/term/" + str(form.cleaned_data['term']) + "/crn/" + str(form.cleaned_data['crn'])
         response = urllib.urlopen(url)
@@ -41,7 +40,7 @@ def course_add_view(request):
         data = data[u'sections']
         instructor_str = "None"
         if len(data[u'instructors']) == 0:
-            pass # Leave default value of None
+            return render(request,"classapp/addcourse.html", {"form": form})
         if len(data[u'instructors']) == 1:
             instructor_str = data[u'instructors'][0][u'first'] + " " + data[u'instructors'][0][u'last']
         else:
