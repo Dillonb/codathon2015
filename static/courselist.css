@@ -6,13 +6,13 @@
   float: left;
   min-height: 100vh; }
 
-.sidebar_icon_bar {
-  height: 33vh;
+.sidebar_info {
+  height: calc(33vh - .5em);
   text-align: center;
-  background: rgba(195, 195, 195, 0.8); }
-  .sidebar_icon_bar img {
+  padding: .5em 0 0; }
+  .sidebar_info img {
     height: 9em; }
-  .sidebar_icon_bar .welcome_text {
-    font-size: 2em; }
+  .sidebar_info .welcome_text {
+    font-size: 1.25em; }
 
 /*# sourceMappingURL=courselist.css.map */

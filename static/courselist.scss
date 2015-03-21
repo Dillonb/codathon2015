@@ -7,16 +7,16 @@
 	min-height: 100vh;
 }
 
-.sidebar_icon_bar {
-	height: 33vh;
+.sidebar_info {
+	height: calc(33vh - .5em);
 	text-align: center;
-	background: rgba(195,195,195,0.8);
+	padding: .5em 0 0;
 	
 	img {
 		height: 9em;
 	}
 	
 	.welcome_text {
-		font-size: 2em;
+		font-size: 1.25em;
 	}
 }
