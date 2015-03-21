@@ -130,13 +130,13 @@ body {
   display: none; }
 
 .sidebar {
-  float: right;
+  position: fixed;
+  right: 0;
   width: 25%;
   padding: 0;
   background: #426139;
   height: 100vh;
-  color: #ddd;
-  position: static; }
+  color: #ddd; }
   .sidebar a {
     color: #163673; }
 
