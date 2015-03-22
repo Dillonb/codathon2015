@@ -4,8 +4,7 @@
 db.sqlite3
 *.pyc
 *.swp
-static/images/Thumbs.db
 static/.sass-cache/*
-static/images/Thumbs.db
 *.db
-static/images/Thumbs.db
+Thumbs.db
+.nfs*
