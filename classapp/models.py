@@ -18,6 +18,7 @@ class UVMUserManager(BaseUserManager):
         return self._create_user(netid, password, **extra_fields)
 
 class UVMUser(AbstractBaseUser):
+    """A custom user model to represent a UVM student."""
     netid = models.CharField(max_length=8,unique=True)
     first_name = models.CharField(max_length=40,null=True)
     last_name = models.CharField(max_length=40,null=True)
@@ -35,6 +36,7 @@ class UVMUser(AbstractBaseUser):
     objects = UVMUserManager()
 
 class Course(models.Model):
+    """Represents a course at UVM."""
     term = models.CharField(max_length=40)
     subject = models.CharField(max_length=10)
     number = models.IntegerField()
@@ -48,9 +50,11 @@ class Course(models.Model):
 
 
     def get_absolute_url(self):
+        """Returns a link to a page where the course can be viewed."""
         return "/courses/view/" + str(self.id)
 
 class Post(models.Model):
+    """Represents a post to a course."""
     user = models.ForeignKey("UVMUser")
     course = models.ForeignKey("Course")
     content = models.TextField()
@@ -59,6 +63,7 @@ class Post(models.Model):
     anon = models.BooleanField(default=False)
 
 class Comment(models.Model):
+    """Represents a comment on a post to a course."""
     user = models.ForeignKey("UVMUser")
     post = models.ForeignKey("Post")
     content = models.TextField()
