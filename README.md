@@ -13,8 +13,8 @@ No professors, which means no pressure and no impact on your grades!
 CatLynx was developed in under 12 hours at a Hackathon sponsored by State Street at the University of Vermont by a team of 8 undergraduate computer science students.
 The team members were:
 
-* Anna Margolis
 * Aaron Brunet
+* Anna Margolis
 * Dillon Beliveau
 * Joey Anetsberger
 * Lily Nguyen
